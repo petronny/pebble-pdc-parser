@@ -81,5 +81,8 @@ for i in range(0,numberOfCommands):
     content=content[2:]
     print("\tNumber of points:\t%d" %numberOfPoints)
     for j in range(0,numberOfPoints):
-        print("\t\tPoint:\t%d %d %d %d" %(content[0],content[1],content[2],content[3]))
+        if drawCommandType==1 or drawCommandType==2:
+            print("\t\tPoint:\t%d %d %d %d" %(content[0],content[1],content[2],content[3]))
+        elif drawCommandType==1 or drawCommandType==2:
+            print("\t\tPoint:\t%f %f %f %f" %(content[0]/8.0,content[1]/8.0,content[2]/8.0,content[3]/8.0))
         content=content[4:]
